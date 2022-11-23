@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 01</title>
+    <link rel="stylesheet" href="../html_step03/css/reset.css">
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        .sc01 {
+            position: relative;
+            height: 100vh;
+            background: url(../html_step03/img/m01.jpg) no-repeat center center/cover;
+        }
+
+        .sc01 .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sc01 .inner h2 {
+            font-size: 50px;
+        }
+
+        .sc01 .inner p {
+            font-size: 15px;
+
+        }
+
+        .mopen {
+            display: none;
+        }
+
+        @media (max-width: 760px) {
+            .mopen {
+                position: fixed;
+                top: 30px;
+                right: 30px;
+                display: block;
+            }
+
+            .sc01 {
+                position: relative;
+                height: 100vh;
+                background: url(../html_step03/img/m01.jpg) no-repeat center center/cover;
+            }
+
+            .sc01 .inner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .sc01 .inner h2 {
+                font-size: 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sc01">
+        <div class="inner">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum commodi veritatis ad distinctio
+                excepturi, id magni quia.</p>
+        </div>
+    </section>
+    <button class="mopen">
+        <i class="xi-bars"></i>
+    </button>
+
+</body>
+
+</html>

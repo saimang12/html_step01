@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="work.css">
     <title>homework</title>
     <style>
         * {
@@ -34,58 +35,52 @@
         body {
             line-height: 1;
         }
-
-        .header {
-            padding: 50px 0;
-            text-align: center;
-            background-color: green;
-        }
-
-        .nav01 {
-            display: flex;
-            gap: 30px;
-            width: 1200px;
-            margin: 0 auto;
-            background-color: blue;
-        }
-
-
-
-        .nav01>ul {
-            display: flex;
-            gap: 30px;
-
-        }
-
-        .nav01 ul li {
-            flex: 1;
-            font-size: 25px;
-            background: yellow;
-        }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav01">
-            <h1><a href="">로고</a></h1>
-            <ul>
-                <li><a href="">menu01</a></li>
-                <li><a href="">menu02</a></li>
-                <li><a href="">menu03</a></li>
-                <li><a href="">menu04</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
+    <div class="Wrap">
+        <div>
+            <header>
+                <nav>
+                    <h1><a href="">로고이미지</a></h1>
+                    <ul>
+                        <li><a href="">menu01</a></li>
+                        <li><a href="">menu02</a></li>
+                        <li><a href="">menu03</a></li>
+                        <li><a href="">menu04</a></li>
+                        <ul>
+                            <li><a href="">menu05</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <section class="sc01">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ut beatae! Ea ipsam numquam porro
+                quibusdam ipsum asperiores.</p>
+            <div class="inner">
+                <div class="box">박스</div>
+                <div class="box">박스</div>
+            </div>
 
-    </section>
-    <section>
 
-    </section>
-    <footer>
-
-    </footer>
+        </section>
+        <section class="sc02">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, voluptas. Ratione cumque quas aperiam
+                omnis, itaque accusamus veniam.</p>
+            <div class="inner">
+                <div class="box">박스</div>
+                <div class="box">박스</div>
+                <div class="box">박스</div>
+            </div>
+        </section>
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
 </body>
 
 </html>
