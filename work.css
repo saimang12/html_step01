@@ -1,123 +1,148 @@
-.Wrap {
+body {
+    color: #444444;
+}
+
+.inner,
+.container {
     width: 1200px;
     margin: 0 auto;
 }
 
-.Wrap>div {
-    border-bottom: 1px solid gray;
+.tit {
+    line-height: 1;
 }
 
-header {
-    width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-
-}
-
-nav {
+.flex {
     display: flex;
-    position: relative;
-    justify-content: center;
+    flex-direction: row;
 }
 
-nav h1 {
+.sec {
+    padding: 100px 0;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    line-height: 70px;
+    background: #f9f9f9;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header .inner {
+    justify-content: space-between;
+}
+
+.header .gnb>ul {
+    gap: 60px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    width: 80px;
+    text-align: center;
+}
+
+.header .gnb>ul>li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 0;
+    height: 3px;
+    background: #444444;
+}
+
+.header .gnb>ul>li:hover::after {
+    width: 120%;
+    transition: 0.3s;
+}
+
+.header .gnb>ul>li>ul {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    transform: translate(0, -20%);
+    z-index: 999;
+    background: #f9f9f9;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header .gnb>ul>li:hover ul {
+    visibility: unset;
+    display: block;
+    transform: translate(0, 0);
+    transition: 0.7s;
+    opacity: 1;
+}
+
+.header .gnb>ul>li~li::before {
+    content: "";
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translate(50%, -50%);
-    font-size: 30px;
-    font-weight: 700;
+    left: -30px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
 }
 
-nav h1 a {
-    display: block;
-    padding: 10px 0;
+.mainVisual {
+    position: relative;
+    height: 700px;
+    background: url(./img/work01.jpg) no-repeat center center/cover;
 }
 
-nav ul {
-    gap: 30px;
-    display: flex;
-}
-
-nav ul li a {
-    display: block;
-}
-
-nav ul {
-    line-height: 50px;
-}
-
-nav>ul>ul {
+.mainVisual .inner {
     position: absolute;
-    right: 100px;
-}
-
-nav ul {
-    display: flex;
-}
-
-.sc01 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 1200px;
+}
+
+.mainVisual .inner h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 0 35px 0;
+    color: #fff
+}
+
+.mainVisual .inner p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 30px;
+}
+
+.subVisual {
+    position: relative;
     padding: 100px 0;
+}
+
+.subVisual .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
     text-align: center;
 }
 
-.sc01 h2 {
+.subVisual .inner h2 {
     font-size: 30px;
     margin: 0 0 20px 0;
 }
 
-.sc01 p {
-    font-size: 15px;
-    margin: 0 0 40px 0;
-}
-
-.sc01>.inner {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-}
-
-.sc01>.inner .box {
-    flex: 1;
-    background: yellow;
-}
-
-.sc02 {
-    background: gray;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.sc02 h2 {
-    font-size: 30px;
-    margin: 0 0 20px 0;
-}
-
-.sc02 p {
-    font-size: 15px;
-    margin: 0 0 40px 0;
-}
-
-.sc02>.inner {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-}
-
-.sc02>.inner .box {
-    flex: 1;
-    background: yellow;
-}
-
-
-.footer {
-    width: 1200px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 100px 0;
+.subVisual .inner p {
+    font-size: 15;
+    line-height: 25px;
 }
